@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>JS Form</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<form action="#" method="get">
+    <label>
+        Name:
+        <input type="text" id="text-input"><p id="name" style="color: red"></p><br />
+    </label>
+    <label>
+        Email:
+        <input type="text" id="email-input"><p id="email" style="color: red"></p><br />
+    </label>
+    <input type="submit" id="submit">
+
+    <script>
+        $(document).ready(function () {
+           $("#submit").click(function () {
+               var name = $("#text-input").val();
+               var email = $("#email-input").val();
+               if(name==""){
+                   $("#name").text("Enter Your Name");
+               }
+               else {
+                   $("#name").text("");
+               }
+               if(email==""){
+                   $("#email").text("Enter Your Email");
+               }
+               else {
+                   $("#email").text("");
+               }
+           })
+        });
+    </script>
+</form>
+</html>

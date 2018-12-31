@@ -1,0 +1,66 @@
+<html>
+<head>
+    <title>js</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<button id="abtn1">Animation1</button>
+<button id="abtn2">Animation2</button>
+<button id="abtn3">Animation3</button>
+<button id="abtn4">Animation4</button>
+<button id="abtn5">Animation5</button>
+<button id="abtn6">Animation6</button>
+<button id="stop">Stop</button>
+<div id="animate1" style="background-color: green; width: 100px; height: 100px; position: absolute">Hello</div>
+<script>
+    $(document).ready(function () {
+        $("#abtn1").click(function () {
+            $("#animate1").animate({left: '250px'});
+        });
+
+        $("#abtn2").click(function () {
+            $("#animate1").animate({
+                left: '250px',
+                opecity: '0.5',
+                height: '150px',
+                width: '150px'
+            });
+        });
+
+        $("#abtn3").click(function () {
+            $("#animate1").animate({
+                left: '250px',
+                height: '+=150px',
+                width: '+=150px'
+            });
+        });
+
+        $("#abtn4").click(function () {
+            var div = $("#animate1");
+            div.css("background-color", "blue", "slow").animate({height: '300px'});
+            div.animate({width: '300px'});
+            div.animate({height: '100px'});
+            div.animate({width: '100px'},function () {
+                alert("Complete"); //Callback last
+            });
+        });
+
+        $("#abtn5").click(function () {
+           $("#animate1").css("color","red").animate({
+               height: 'toggle'
+           });
+        });
+
+        $("#abtn6").click(function () {
+            var animi = $("#animate1");
+            animi.css("background-color","red").animate({left: '100px'}, "slow");
+            animi.animate({fontSize: '3em'}, "slow");
+            alert("callback"); //callback first
+        });
+
+        $("#stop").click(function () {
+            $("#animate1").stop();
+        });
+    });
+</script>
+</body>
+</html>

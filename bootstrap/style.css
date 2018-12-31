@@ -1,0 +1,147 @@
+.head{
+    background-color: green; height: 50px
+}
+
+body{
+    background-image: url("background.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.calculator {
+    width: 400px;
+    height: 700px;
+    margin: auto;
+    border: none;
+}
+
+.calculator-head{
+    height: 50px;
+    background-color: #57D783;
+}
+
+.calculator-body{
+    background-color: #F8F8F8;
+    height: 650px;
+}
+
+.display-body{
+    height: 100px;
+    /*background-color: aqua;*/
+}
+
+.input-body{
+    height: 550px;
+    /*background-color: tomato;*/
+    margin: 0 13px 0 13px;
+}
+
+.button-up{
+    height: 60px;
+    width: 89.6px;
+    background-color: #F2F2F2;
+    border: none;
+    border-radius: 5px;
+}
+
+.button-mid{
+    margin-top: 4px;
+    height: 89.6px;
+    width: 89.6px;
+    background-color: #F2F2F2;
+    border: none;
+    border-radius: 5px;
+}
+
+.button-down-left{
+    margin: 0;
+    padding: 0;
+    /*border: solid 1px blueviolet;*/
+    width: 280px;
+    height: 200px;
+    float: left;
+    /*background-color: #e3e3e2;*/
+}
+
+.button-down-left-1{
+    background-color: #F2F2F2;
+    width: 181px;
+    height: 89.6px;
+    margin-top: 4px;
+    margin-left: 0px;
+    border: none;
+    border-radius: 5px;
+}
+
+.button-down-left-2{
+    background-color: #F2F2F2;
+    width: 87.6px;
+    height: 89.6px;
+    margin-top: 4px;
+    margin-left: 2px;
+    border: none;
+    border-radius: 5px;
+}
+
+.button-down-left-3{
+    width: 89.6px;
+    height: 89.6px;
+    margin-top: 4px;
+    margin-left: 0px;
+    background-color: #FF004F;
+    color: #F8F8F8;
+    border: none;
+    border-radius: 5px;
+}
+
+.button-down-left-4{
+    background-color: #57D783;
+    width: 181px;
+    height: 89.6px;
+    margin-top: 4px;
+    margin-left: 0px;
+    color: #F8F8F8;
+    border: none;
+    border-radius: 5px;
+}
+
+.button-down-right{
+    /*background-color: #e3e3e2;*/
+    margin: 0;
+    padding: 0;
+    height: 200px;
+    width: 92px;
+    /*border: solid 1px blue;*/
+    float: right;
+}
+
+.button-down-right-1{
+    background-color: #F2F2F2;
+    width: 89.6px;
+    height: 184px;
+    margin-top: 4px;
+    border: none;
+    border-radius: 5px;
+}
+
+.menu{
+    float: left;
+    margin-left: 8px;
+    margin-top: 14px;
+}
+.menu div{
+    width: 26px;
+    height: 2px;
+    background-color: honeydew;
+    margin:  4px 0;
+}
+.setting{
+    background-image: url("setting.png");
+    float: right;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 8px;
+    margin-right: 8px;
+}

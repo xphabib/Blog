@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="col-md-2 text-muted">muted</div>
+    <div class="col-md-2 text-primary">prmary</div>
+    <div class="col-md-2 text-success">success</div>
+    <div class="col-md-2 text-info">information</div>
+    <div class="col-md-2 text-warning">warning</div>
+    <div class="col-md-2 text-danger">danger</div>
+    <div class="row">
+        <div class="col-md-12 bg-muted">muted</div>
+        <div class="col-md-12 bg-primary">primary</div>
+        <div class="col-md-12 bg-success">success</div>
+        <div class="col-md-12 bg-info">info</div>
+        <div class="col-md-12 bg-warning">warning</div>
+        <div class="col-md-12 bg-danger">danger</div>
+    </div>
+</div>
+<div>
+    <h1>
+        <div>
+            <p>
+            <div><span></span></div>
+            </p>
+        </div>
+    </h1>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("span").parents().css({"color":"red", "border": "2px solid red"});
+    })
+</script>
+</body>
+</html>

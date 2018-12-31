@@ -1,0 +1,94 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+<h2>This is text</h2>
+
+<button id="btn-apendtext">Append Text</button>
+
+<ol>
+    <li>This is list</li>
+    <li>This is list</li>
+    <li>This is list</li>
+</ol>
+
+<button id="ap-list">Append List</button>
+
+<ul class="ul2">
+    <li>This is ul list</li>
+    <li>This is ul list</li>
+    <li>This is ul list</li>
+</ul>
+
+<button class="prepend">Prepend List</button>
+
+<p id="p-text">This is text</p>
+<button id="prepend-text">Prepend text</button>
+
+
+<p><img id="before-after" src="../bootstrap/background.jpeg" alt="" style="width: 100px; height: 100px"></p>
+<button id="before">before</button>
+<button id="after">after</button>
+<button id="add-three">add three element</button>
+
+<script>
+
+
+//    var txt1 = "<p>First Text Normal string</p>";
+//    var txt2 = $("<p></p>").text("2nd Text Jquery");
+//    var txt3 = document.createElement("b");
+//    txt3.innerHTML = "Third Text Dom";
+
+    //    function varaddafter() {
+    //        $("#before-after").after(txt1,txt2,txt3);
+    //    }
+
+    function after() {
+        $("#before-after").after("<b>This is the payback</b>");
+    }
+
+    function before() {
+        $("#before-after").before("This is the payback");
+    }
+
+
+    $(document).ready(function () {
+
+        $("#add-three").click(function () {
+            var txt1 = "<p>First Text Normal string</p>";
+            var txt2 = $("<p></p>").text("2nd Text Jquery");
+            var txt3 = document.createElement("b");
+            txt3.innerHTML = "Third Text Dom";
+            $("#before-after").after(txt1,txt2,txt3);
+        });
+
+        $("#before").click(function () {
+            before();
+        });
+
+        $("#after").click(function () {
+            after();
+        });
+
+        $("#ap-list").click(function () {
+            $("ol").append("<li>Appended List</li>")
+        });
+
+        $("#btn-apendtext").click(function () {
+            $("h2").append("<b>Appended Text</b>");
+        });
+
+        $(".prepend").click(function () {
+            $(".ul2").prepend("<li>Prepended List</li>");
+        });
+
+        $("#prepend-text").click(function () {
+            $("#p-text").prepend(eval("5+7+9").toString());
+        });
+    });
+</script>
+</body>
+
+</html>

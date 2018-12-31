@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>js</title>
+</head>
+<body>
+<p id="demo">date</p>
+<button onclick="document.getElementById('demo').innerHTML = Date()">Date</button>
+<p onclick="this.innerHTML = Date()">date</p>
+<button onclick="displayDate()">click</button>
+<p id="date" ></p>
+<script>
+    function displayDate() {
+        document.getElementById('date').innerHTML = Date();
+    }
+</script>
+</body>
+</html>

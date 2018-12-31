@@ -1,0 +1,48 @@
+<h<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">tml>
+<head>
+    <title>js</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<p>something</p>
+<button id="show">Show</button>
+<button id="hide">hide</button>
+<button id="toggle">toggle</button>
+
+<p class="pfade">fade</p>
+<button class="fade">fade out</button>
+<button class="fade2">fade in</button>
+
+<div class="div1">fade toggle</div>
+<button class="div1toggle">fade toggle</button>
+
+
+
+
+<script>
+    $(document).ready(function () {
+        $("#show").click(function () {
+            $("p").show(1000);
+        });
+
+        $("#hide").click(function () {
+            $("p").hide(1000);
+        });
+
+        $("#toggle").click(function () {
+            $("p").toggle(10000);
+        });
+
+        $(".fade").click(function () {
+           $(".pfade").fadeOut()
+        });
+        $(".fade2").click(function () {
+           $(".pfade").fadeIn()
+        });
+        $(".div1toggle").click(function () {
+            $(".div1").fadeToggle(200);
+        });
+    });
+</script>
+</body>
+</html>

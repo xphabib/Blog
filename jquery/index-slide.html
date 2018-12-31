@@ -1,0 +1,73 @@
+<html>
+<head>
+    <title>js</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        #panel, #plip{
+            padding: 5px;
+            text-align: center;
+            background-color: deeppink;
+            border: solid 1px darkgreen;
+        }
+
+        #panel{
+            padding: 50px;
+            display: none;
+            background-color: chocolate;
+        }
+        #panel2, #flip2{
+            padding: 5px;
+            text-align: center;
+            background-color: blue;
+            border: solid 1px darkgreen;
+        }
+
+        #panel2{
+            padding: 70px;
+            display: block;
+            background-color: darkgreen;
+        }
+
+        #panel3, #flip3 {
+            padding: 5px;
+            text-align: center;
+            background-color: greenyellow;
+            border: solid 1px darkgreen;
+        }
+
+        #panel3{
+            padding: 50px;
+            display: block;
+            background-color: orchid;
+        }
+    </style>
+</head>
+<body>
+<div id="plip">This is Flip Down</div>
+<div id="panel">This is panel and It will slide down</div>
+
+<div id="flip2">This is flip Up</div>
+<div id="panel2">This is panel and It will slide Up</div>
+
+<div id="flip3">This is flip for Toggle</div>
+<div id="panel3">This is panel and It will Toggle</div>
+
+
+
+<script>
+    $(document).ready(function () {
+        $("#plip").click(function () {
+            $("#panel").slideDown();
+        });
+
+        $("#flip2").click(function () {
+            $("#panel2").slideUp(1000);
+        });
+
+        $("#flip3").click(function () {
+            $("#panel3").slideToggle(2500);
+        });
+    });
+</script>
+</body>
+</html>

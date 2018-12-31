@@ -1,0 +1,77 @@
+<html>
+<head>
+    <title>Jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        ul li{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<p>
+    <input id="one" type="text" value="0">
+    <input id="two" type="text" value="0">
+    <input id="three" type="text" value="0">
+    <input type="button" id="btn-calc" value="Calculate">
+</p>
+<p>
+    <input type="text" id="clc-input">
+<p id="clc-output">Result: </p>
+<button id="clc">Claculate</button>
+
+<button id="rendom-generator">Rendom Generator</button>
+<div id="rendom-number"></div>
+
+</p>
+
+
+<p>Bangladesh is amar desh <span id="read-more">read more</span><span id="show-p" style="display: none">This is a developing country.</span> </p>
+
+<button onclick="new_append()">Text Append</button>
+
+
+<p>Here are sometext</p>
+
+<script>
+    $("#btn-calc").click(function () {
+        alert(parseInt($("#one").val()) + parseInt($("#two").val()) + parseInt($("#three").val()));
+    });
+
+    $(document).ready(function () {
+        $("#clc").click(function () {
+            $("#clc-output").html(function (index, value) {
+                return value + + eval($("#clc-input").val().toString())
+            });
+        });
+
+        $("#rendom-generator").click(function () {
+            $("#rendom-number").html(function () {
+                var x = ""
+                for(var i = 0; i < 5; i++){
+                    x = x + "<li>"+Math.floor((Math.random() * 100))+"</li> ";
+                }
+                return "<ul>"+x+"</ul>";
+            });
+        });
+    });
+
+    $(document).ready(function () {
+        $("#read-more").css('color','blue').css('cursor', 'hand').click(function () {
+            $("#read-more").css('display','none');
+            $("#show-p").show();
+        });
+    });
+
+    function new_append() {
+        var txt1 = "<p>text1</p>";
+        var txt2 = $("<p></p>").text("text2");
+        var txt3 = document.createElement("p");
+        txt3.innerHTML = "text3";
+        $("body").append(txt1, txt2, txt3)
+    }
+
+</script>
+</body>
+
+</html>

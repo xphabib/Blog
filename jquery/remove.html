@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>js</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+<p id="r1">Remove 1</p>
+<p id="r2">Remove 2</p>
+<p id="r3">Remove 3</p>
+<p id="r4">Remove 4</p>
+<p id="r5">Remove 5</p>
+<p>Remove 6</p>
+<p>Remove 7</p>
+<p>Remove 8</p>
+<button id="b1">remove 1</button>
+
+<script>
+    $(document).ready(function () {
+        $("#b1").click(function () {
+            $("p").remove("#r1, #r5")
+        });
+    });
+</script>
+</body>
+</html>

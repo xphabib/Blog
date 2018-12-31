@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>js</title>
+</head>
+<body>
+<p id="type"></p>
+<p id="model"></p>
+<p id="color"></p>
+
+<p id="demo"></p>
+<script>
+    var car = {type: "Fiat", model:"500", color:"white"};
+    document.getElementById('type').innerHTML = car.type;
+    document.getElementById('model').innerHTML = car.model;
+    document.getElementById('color').innerHTML = car.color;
+
+    var person = {
+        first_name: "Habib",
+        last_name: "Rubel",
+        address: "Noakhali",
+        work: "syftet ltd",
+        full_name: function(){
+            return this.first_name+" "+this.last_name;
+        }
+    }
+
+    document.getElementById('demo').innerHTML = person.full_name();
+    //document.getElementById('demo').innerHTML = "Name:<i>"+person["name"]+"</i><br \>"+"Address:<i>"+person.address+"</i><br />"+"Company:<i>"+person.work+"</i>";
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>JavaScript Practice</title>
+
+    <script src="my_script.js"></script>
+    <script src="my_script2.js"></script>
+
+</head>
+<body>
+<img id="image1" src=""><br />
+<button onclick="document.getElementById('image1').src='image1.jpeg'">Show My Image</button>
+
+<h3 id="h_say_something">Say Something</h3>
+<button onclick="document.getElementById('h_say_something').style.fontSize='30px'" >font resize</button>
+
+<!--JavaScript Can Hide HTML Elements-->
+<button onclick="document.getElementById('h_say_something').style.display='none'">hide</button>
+
+<!--JavaScript Can Show HTML Elements-->
+<button onclick="document.getElementById('h_say_something').style.display='block'">show</button>
+
+<p id="text1"></p>
+
+
+<h1 id="my_bangladesh">I lo...</h1>
+<button onclick="my_func()">BD</button>
+
+<p id="text2"></p>
+
+<h1 id="habib">Habib</h1>
+<button onclick="my_func2()">change name</button>
+
+<button onclick="my_2nd_func()">payback</button>
+
+<h2 id="cocacola"></h2>
+<button onclick="my_func3()">external js</button>
+<script>
+    document.getElementById('text1').innerHTML="Bangladesh is my Country";
+
+    function my_2nd_func(){
+        document.getElementById('text2').innerHTML = "This is the payback";
+    }
+
+</script>
+</body>
+</html>

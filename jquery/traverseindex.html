@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>js</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<h1>
+    <div>div1<a href="">a1</a>
+        <p> p1
+        <h3>h3 1
+            <div class="terget">div</div>
+        </h3>
+        </p>
+    </div>
+</h1>
+
+<script>
+    $(document).ready(function () {
+        $("div").children("div.terget").css({"color": "red", "border": "2px solid red"})
+    })
+</script>
+
+</body>
+</html>

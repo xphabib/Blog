@@ -1,0 +1,43 @@
+<html>
+<head>
+    <title>js</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="div1" style="height: 100px; width: 100px; background-color: blueviolet; display: none"></div><br />
+<div id="div2" style="height: 100px; width: 100px; background-color: darkorange; display: none"></div><br />
+<div id="div3" style="height: 100px; width: 100px; background-color: deeppink; display: none"></div><br />
+<button id="fadein">Fade In</button>
+<button id="fadeout">Fade Out</button>
+<button id="fadetoggle">Fade Toggle</button>
+<button id="fadeto">Fade to</button>
+
+<script>
+    $(document).ready(function () {
+        $("#fadein").click(function () {
+            $("#div1").fadeIn();
+            $("#div2").fadeIn("slow");
+            $("#div3").fadeIn(3000);
+        });
+
+        $("#fadeout").click(function () {
+           $("#div3").fadeOut();
+           $("#div2").fadeOut("slow");
+           $("#div1").fadeOut(3000);
+        });
+
+        $("#fadetoggle").click(function () {
+            $("#div1").fadeToggle();
+            $("#div2").fadeToggle("slow");
+            $("#div3").fadeToggle(3000);
+        })
+
+        $("#fadeto").click(function () {
+           $("#div1").fadeTo("slow",.17);
+           $("#div2").fadeTo("slow", .50);
+           $("#div3").fadeTo("slow", .70);
+        });
+    });
+</script>
+</body>
+</html>

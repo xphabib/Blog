@@ -1,0 +1,103 @@
+<html>
+<head>
+    <title>Jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<!--get-->
+<p id="text">Some thext is <b>bold</b> text. </p>
+<input type="show-value" id="input-text" value="something">
+<button id="show-text">show text</button>
+<button id="show-html">show html</button>
+<button id="show-value">show value</button>
+<a href="www.syftet.com" id="asyftet">Syftet Limited</a>
+<button id="syftet">Syftet Limited</button>
+<!--get end-->
+
+
+<!--set-->
+<p id="set-text">Set Text</p>
+<button id="change-text">Change Text</button>
+<p id="set-html">Set Html</p>
+<button id="change-html">Change Html</button>
+<input id="set-value" value="Set Value" type="text">
+<button id="change-value">Change Value</button>
+
+<p id="old-text">This is old <b>Text, </b></p>
+<button id="apend-in-old-text">Append in old text</button>
+
+<p id="old-text1">Old text Without HTML,</p>
+<button id="old-text1-btn">Append and html</button>
+
+<p>Attr Change</p>
+<p id="box" style="background-color: chartreuse; width: 100px; height: 100px"></p>
+<button id="box-color-change">Change the box Color</button>
+
+<a id="a-id" href="https://www.syftet.com">syftet</a>
+<button id="visited">Visited</button>
+
+<!--set end-->
+<script>
+    //get
+    $(document).ready(function () {
+        $("#show-text").click(function () {
+            alert("Text: "+$("#text").text());
+        });
+        $("#show-html").click(function () {
+            alert("HTML: "+$("#text").html());
+        });
+        $("#show-value").click(function () {
+            alert("VALUE: "+$("#input-text").val());
+        });
+
+        $("#syftet").click(function () {
+            alert($("#asyftet").attr("href"));
+        });
+    });
+
+    //set
+
+    $(document).ready(function () {
+        $("#change-text").click(function () {
+            $("#set-text").text("Changed Text");
+        });
+        $("#change-html").click(function () {
+            $("#set-html").html("<h1>Changed HTML <i>Code</i></h1>");
+        });
+        $("#change-value").click(function () {
+            $("#set-value").val("Changed Value");
+        });
+
+        $("#apend-in-old-text").click(function () {
+            $("#old-text1").html(function (index, value) {
+                return "Old Text: " + value + "New Text: This is Index(" + index + ")";
+            });
+        });
+
+        $("#old-text1-btn").click(function () {
+            $("#old-text1").html(function (index, value) {
+                return "Old Text: " + value + ", New Text: <h3 style='color: red'> This is new Text</h3>";
+            });
+        });
+        var i=0;
+        $("#box-color-change").click(function () {
+            var color = ["red", "blue", "black"];
+            $("#box").attr("style", "background-color: "+ color[i] +"; width: 100px; height: 100px");
+            i++;
+            if(i==3){
+                i=0;
+            }
+        });
+
+        $("#visited").click(function () {
+            $("#a-id").attr("href", function (i, oldvalue) {
+                return oldvalue+"/jquery/";
+            });
+        });
+
+    });
+
+</script>
+</body>
+
+</html>
